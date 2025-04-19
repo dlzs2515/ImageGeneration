@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片生成器</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="navbar" id="navbar">
+        <a href="/index.html">首页</a>
+        <a href="/images.html">图片生成器</a>
+        <a href="/about.html">实现原理</a>
+    </div>
+
+    <div class="container">
+        <h1>生成您的图片</h1>
+        <div class="input-section">
+            <textarea id="promptInput" placeholder="请输入图片描述..." rows="4" required></textarea>
+
+            <div class="parameter-inputs">
+                <div>
+                    <label>宽度:</label>
+                    <input type="number" id="widthInput" value="1024" min="64" max="2048">
+                </div>
+                <div>
+                    <label>高度:</label>
+                    <input type="number" id="heightInput" value="1024" min="64" max="2048">
+                </div>
+                <div>
+                    <label>种子:</label>
+                    <input type="number" id="seedInput" value="100" min="0">
+                </div>
+            </div>
+
+            <button onclick="generateImage()">生成图片</button>
+        </div>
+
+        <div class="image-container">
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+            <img id="generatedImage" src="" alt="您还未生成图片" style="display: none;">
+            <button onclick="saveImage()" class="save-button" style="display: none;">另存为图片</button>
+        </div>
+    </div>
+
+    <script src="src/images.js">
+
+    </script>
+</body>
+</html>

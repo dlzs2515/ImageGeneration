@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="navbar" id="navbar">
+        <a href="/index.html">首页</a>
+        <a href="/images.html">图片生成器</a>
+        <a href="/about.html">实现原理</a>
+    </div>
+
+    <div class="container">
+        <h2>导航栏:<a href="#foreword">前言</a>,<a href="#api">调用API</a>,<a href="#OpenSourceCode">开源地址</a></h2>
+        <hr>
+        <div id="foreword">
+            <h2>前言</h2>
+            <p>大概的实现原理就是通过调用一个api来生成图片，你学会了调用这个api你也可以写一个差不多的。</p>
+        </div>
+        <hr>
+        <div id="api">
+            <h2>调用API</h2>           
+            <p>既然是调用api那调用的是什么api呢?</p>
+            <p>这个api就是<a href="https://pollinations.ai/">https://image.pollinations.ai/prompt/{图片描述}</a></p>
+            <p>将{图片描述}替换为你想要生成的图片描述再访问这个api就可以生成你描述的图片了。</p>
+            <p>还可以在这个链接后面添加?width=${width}&height=${height}&seed=${seed}&model=flux&nologo=true</p>
+            <p>width和height是图片的宽度和高度，seed是随机种子，model是模型，nologo是不显示logo(水印)，可以不加。</p>
+        </div> 
+        <hr>
+        <div id="OpenSourceCode">
+            <h2>开源地址</h2>
+            <q>既然原理也讲了，那么干脆直接开源算了，这个页面所有的代码我都会在<a href="https://github.com/dlzs2515/ImageGeneration/">Github仓库</a>开源。</q><br>
+            <q>如果你喜欢这个页面或给你带来帮助的话请在<a href="https://github.com/dlzs2515/ImageGeneration/">Github仓库</a>给我点个Star吧!谢啦!</q>
+        </div>
+    </div>
+
+    
+
+    
+</body>
+</html>
